@@ -2,11 +2,11 @@
   "app": "lupin-win",
   "name": "루팡 윈",
   "version": "1.3.4",
-  "released": false,
+  "released": true,
   "minimum_os": "Windows 10",
-  "download_url": null,
-  "sha256": null,
-  "notes_url": "https://park-saem.github.io/lupin-win-release/",
+  "download_url": "https://github.com/Park-saem/lupin-win-release/releases/download/v1.3.4/Lupin-Setup-1.3.4.exe",
+  "sha256": "8b2d39940bbf309d071599c0abe715acbcf1755f14fb33fad8c923eb5a915340",
+  "notes_url": "https://github.com/Park-saem/lupin-win-release/releases/tag/v1.3.4",
   "guide_url": "https://park-saem.github.io/lupin-win-release/guide.html",
-  "message": "첫 공개 설치 파일을 준비하고 있습니다."
+  "message": "루팡 윈 1.3.4 설치 파일이 공개되었습니다."
 }
