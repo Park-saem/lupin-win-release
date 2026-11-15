@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="루팡 윈 설치와 업데이트 사용 안내">
+  <title>사용 안내 — 루팡 윈</title>
+  <link rel="icon" href="assets/lupin-icon.png" type="image/png">
+  <style>
+    /* Hallmark v2.0.0 — matching editorial guide, inferred from the Lupin Windows brand. */
+    /* Critique: prioritize scannable setup facts and keep unpublished-release limits visible. */
+    :root { color-scheme: light; --paper:#f5f2eb; --surface:#fffdf8; --ink:#20251f; --muted:#626a5f; --line:#d8d8cc; --green:#315944; --green-dark:#203f30; --gold:#b88c45; --body:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif; --display:"Iowan Old Style","Batang","KoPub Batang",serif; --measure:900px; }
+    * { box-sizing:border-box; } html,body { overflow-x:clip; } body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--body); line-height:1.75; }
+    a { color:var(--green-dark); text-underline-offset:3px; } a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .wrap { width:min(var(--measure),calc(100% - 48px)); margin-inline:auto; } header { border-bottom:1px solid var(--line); }
+    nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:24px; } .brand { display:flex; align-items:center; gap:10px; color:var(--green-dark); text-decoration:none; font-weight:800; }
+    .brand img { width:36px; height:36px; object-fit:contain; } nav>a:last-child { color:var(--muted); }
+    main { padding-block:64px 96px; } h1,h2,h3 { font-family:var(--display); letter-spacing:-.04em; line-height:1.25; } h1 { max-width:760px; margin:0 0 18px; font-size:clamp(2.6rem,6vw,4.6rem); overflow-wrap:break-word; min-width:0; }
+    .intro { max-width:720px; margin-bottom:42px; color:var(--muted); font-size:1.1rem; } .notice { margin:0 0 48px; padding:20px 22px; border-left:4px solid var(--gold); background:var(--surface); }
+    .notice strong { display:block; margin-bottom:4px; color:var(--green-dark); } section { padding:34px 0; border-top:1px solid var(--line); } h2 { margin:0 0 16px; font-size:2rem; } h3 { margin:22px 0 8px; font-family:var(--body); font-size:1.08rem; letter-spacing:0; }
+    p { max-width:760px; margin:0 0 14px; } ul,ol { padding-left:1.35rem; } li { margin:.42rem 0; } .small { color:var(--muted); font-size:.94rem; }
+    .facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; border:1px solid var(--line); background:var(--line); }
+    .fact { padding:18px; background:var(--surface); } .fact strong { display:block; margin-bottom:3px; } .fact span { color:var(--muted); font-size:.94rem; }
+    footer { border-top:1px solid var(--line); color:var(--muted); } .foot { min-height:82px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    @media(max-width:640px) { .wrap { width:calc(100% - 36px); } main { padding-top:46px; } .facts { grid-template-columns:1fr; } .foot { align-items:flex-start; justify-content:center; flex-direction:column; padding-block:18px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; } }
+  </style>
+</head>
+<body>
+  <header><nav class="wrap" aria-label="주 메뉴"><a class="brand" href="./"><img src="assets/lupin-icon.png" alt=""><span>루팡 윈</span></a><a href="./">배포 페이지로</a></nav></header>
+  <main class="wrap">
+    <h1>설치와 사용 안내</h1>
+    <p class="intro">Windows용 루팡 윈을 설치하고 설정하는 방법입니다. 첫 공개 설치 파일이 게시되면 이 안내에 실제 다운로드 링크와 설치 화면을 추가합니다.</p>
+    <aside class="notice"><strong>첫 공개 설치 파일은 아직 준비 중입니다.</strong>현재 공개 배포 페이지와 설명서를 먼저 열었습니다. 파일이 게시되기 전에는 비공식 링크에서 설치 파일을 내려받지 마세요.</aside>
+    <section>
+      <h2>설치 전 확인</h2>
+      <div class="facts">
+        <div class="fact"><strong>운영체제</strong><span>Windows 10 이상을 기준으로 합니다.</span></div>
+        <div class="fact"><strong>사용자 권한</strong><span>현재 사용자 계정에 설치하는 방식으로 준비 중입니다.</span></div>
+        <div class="fact"><strong>한컴오피스</strong><span>한글 문서 변환 기능을 쓰려면 PC에 한컴오피스가 필요합니다.</span></div>
+        <div class="fact"><strong>설치 파일</strong><span>공식 배포 페이지의 GitHub Releases에서 받을 예정입니다.</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>처음 설치</h2>
+      <ol>
+        <li>공식 페이지에서 최신 버전과 변경 내용을 확인합니다.</li>
+        <li>설치 EXE를 내려받아 실행합니다.</li>
+        <li>설치 화면에서 공문 폴더, 변환 결과 폴더, AI 요약과 알림을 설정합니다.</li>
+        <li>설치가 끝나면 루팡 윈을 열고 설정 화면에서 선택 사항을 확인합니다.</li>
+      </ol>
+      <p class="small">화면 구성과 설치 절차는 첫 공개 설치 파일에 맞춰 확정한 뒤 보완합니다.</p>
+    </section>
+    <section>
+      <h2>업데이트</h2>
+      <p>새 버전이 나오면 홈페이지와 공개 릴리스에 버전, 변경 내용, 설치 파일을 올릴 예정입니다. 앱 내 업데이트 확인은 배포 시스템과 연결한 뒤 안내합니다.</p>
+      <ol>
+        <li>공식 페이지에서 새 버전인지 확인합니다.</li>
+        <li>설치 파일을 내려받아 실행하고 안내에 따라 업데이트합니다.</li>
+        <li>설치 중 문제가 생기면 업데이트 전에 중요한 설정과 데이터를 백업합니다.</li>
+      </ol>
+      <p class="small">현재 버전에서는 자동 다운로드나 백그라운드 설치가 연결되어 있지 않습니다.</p>
+    </section>
+    <section>
+      <h2>개인정보와 보안</h2>
+      <p>공문에는 개인정보가 포함될 수 있습니다. AI 기능을 사용할 때에는 실제 문서를 전송하기 전에 설정과 개인정보 처리 방식을 확인하세요. API 키와 알림 토큰을 공개 페이지, 문의 글, 화면 캡처에 포함하지 마세요.</p>
+      <p>공식 다운로드와 변경 내역은 <a href="https://github.com/Park-saem/lupin-win-release/releases">공개 릴리스 페이지</a>에서 확인할 수 있습니다.</p>
+    </section>
+  </main>
+  <footer><div class="foot wrap"><span>루팡 윈 사용 안내</span><a href="./">배포 홈페이지</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="루팡 윈 공식 다운로드와 업데이트 안내">
+  <title>루팡 윈 — 선생님의 공문 비서</title>
+  <link rel="icon" href="assets/lupin-icon.png" type="image/png">
+  <style>
+    /* Hallmark v2.0.0 — editorial release page, inferred from the Lupin Windows brand. */
+    /* Critique: keep the first release state explicit and make the guide the useful next step. */
+    :root {
+      color-scheme: light;
+      --paper: #f5f2eb;
+      --surface: #fffdf8;
+      --ink: #20251f;
+      --muted: #626a5f;
+      --line: #d8d8cc;
+      --green: #315944;
+      --green-dark: #203f30;
+      --gold: #b88c45;
+      --soft: #e8ece4;
+      --body: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+      --display: "Iowan Old Style", "Batang", "KoPub Batang", serif;
+      --measure: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html, body { overflow-x: clip; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); line-height: 1.65; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    .wrap { width: min(var(--measure), calc(100% - 48px)); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--green-dark); text-decoration: none; font-weight: 800; letter-spacing: -.04em; }
+    .brand img { width: 38px; height: 38px; object-fit: contain; }
+    .nav-links { display: flex; gap: 26px; color: var(--muted); font-size: .94rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--green-dark); }
+    main { padding-bottom: 90px; }
+    .hero { min-height: 650px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; gap: 52px; padding-block: 78px; }
+    .hero-copy { max-width: 660px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 22px; font-family: var(--display); font-size: clamp(3.1rem, 6.4vw, 5.5rem); font-weight: 600; letter-spacing: -.075em; line-height: 1.08; overflow-wrap: break-word; min-width: 0; }
+    h1 span { display: block; color: var(--green); }
+    .lead { max-width: 550px; margin-bottom: 30px; color: var(--muted); font-size: 1.14rem; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid var(--green-dark); border-radius: 4px; background: var(--green-dark); color: #fff; font-weight: 700; text-decoration: none; }
+    .button.secondary { background: transparent; color: var(--green-dark); }
+    .button[aria-disabled="true"] { cursor: default; opacity: .68; }
+    .release-note { margin: 14px 0 0; color: var(--muted); font-size: .88rem; }
+    .product-art { min-height: 390px; display: grid; place-items: center; position: relative; border: 1px solid var(--line); background: var(--surface); }
+    .product-art::before { content: ""; position: absolute; width: 68%; aspect-ratio: 1; border: 1px solid #dce2d8; border-radius: 50%; }
+    .product-art img { position: relative; width: min(66%, 300px); height: auto; object-fit: contain; filter: drop-shadow(0 20px 24px #23372a22); }
+    .section { padding-block: 54px; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 44px; align-items: start; margin-bottom: 28px; }
+    h2 { margin: 0; font-family: var(--display); font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.16; letter-spacing: -.05em; }
+    .section-head p { max-width: 620px; margin: 4px 0 0; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .step { padding: 24px 22px 28px 0; }
+    .step + .step { padding-left: 22px; border-left: 1px solid var(--line); }
+    .step b { display: block; margin-bottom: 10px; color: var(--green); font-family: var(--display); font-size: 1.8rem; font-weight: 500; }
+    .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .requirements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .requirement { min-height: 142px; padding: 20px; background: var(--surface); }
+    .requirement strong { display: block; margin-bottom: 6px; }
+    .requirement span { color: var(--muted); font-size: .92rem; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .foot { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    footer a { text-underline-offset: 3px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, var(--measure)); }
+      .nav { min-height: 66px; }
+      .nav-links { gap: 16px; font-size: .88rem; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 36px; padding-block: 64px; }
+      .product-art { min-height: 300px; }
+      .product-art img { width: min(58%, 230px); }
+      .section-head { grid-template-columns: 1fr; gap: 14px; }
+      .steps, .requirements { grid-template-columns: 1fr; }
+      .step, .step + .step { padding: 20px 0; border-left: 0; }
+      .step + .step { border-top: 1px solid var(--line); }
+      .foot { align-items: flex-start; justify-content: center; flex-direction: column; padding-block: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav wrap" aria-label="주 메뉴">
+      <a class="brand" href="./"><img src="assets/lupin-icon.png" alt=""><span>루팡 윈</span></a>
+      <div class="nav-links"><a href="guide.html">사용 안내</a><a href="#download">다운로드</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">공문 업무를 덜고,<span>수업에 더 가까이.</span></h1>
+        <p class="lead">루팡 윈은 Windows에서 공문을 정리하고 문서 작업을 돕는 선생님의 공문 비서입니다.</p>
+        <div class="actions" id="download">
+          <span class="button" aria-disabled="true">첫 설치 파일 준비 중</span>
+          <a class="button secondary" href="guide.html">사용 안내 보기</a>
+        </div>
+        <p class="release-note">공개 설치 파일이 준비되면 이 페이지에서 버전과 다운로드 링크를 안내합니다.</p>
+      </div>
+      <div class="product-art" aria-label="루팡 윈 앱 아이콘"><img src="assets/lupin-brand.png" alt="루팡 윈 캐릭터"></div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>설치는 간단하게,<br>업데이트는 안전하게.</h2>
+          <p>새 버전은 공식 배포 페이지에서 확인할 수 있도록 준비하고 있습니다. 앱 알림과 설치 파일 배포는 첫 공개 버전을 만들 때 연결됩니다.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><b>01</b><h3>공식 안내 확인</h3><p>이 페이지에서 현재 버전과 업데이트 내용을 확인합니다.</p></article>
+          <article class="step"><b>02</b><h3>설치 파일 받기</h3><p>공개된 설치 파일을 내려받아 실행합니다. 아직 첫 설치 파일은 게시되지 않았습니다.</p></article>
+          <article class="step"><b>03</b><h3>기존 설정 유지</h3><p>업데이트 설치는 기존 사용자 설정과 처리 기록을 보존하도록 설계되어 있습니다.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><h2>Windows용<br>프로그램</h2><p>루팡 윈은 Windows 데스크톱 설치 프로그램으로 제공됩니다. Mac 버전은 별도 프로젝트이며 이 배포 페이지에서 제공하지 않습니다.</p></div>
+        <div class="requirements">
+          <div class="requirement"><strong>대상 운영체제</strong><span>Windows 10 이상을 기준으로 준비하고 있습니다.</span></div>
+          <div class="requirement"><strong>설치 방식</strong><span>사용자 계정에 설치하는 Windows 설치 파일(EXE)로 배포할 예정입니다.</span></div>
+          <div class="requirement"><strong>사용 설명서</strong><span><a href="guide.html">설치 전 확인 사항과 사용 안내</a>를 볼 수 있습니다.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="foot wrap"><span>루팡 윈 · 선생님의 공문 비서</span><span><a href="guide.html">사용 안내</a> · <a href="https://github.com/Park-saem/lupin-win-release/releases">공개 릴리스</a></span></div></footer>
+</body>
+</html>
